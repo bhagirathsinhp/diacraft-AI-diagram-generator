@@ -1,7 +1,7 @@
 import os
 import logging
 import time
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from langchain_openai import OpenAI, ChatOpenAI
 from plantuml import PlantUML
@@ -266,6 +266,11 @@ prompts = {
 
 # Initialize the chat model with parameters
 chat_model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model="gpt-4o", temperature=0)
+
+# Home route to serve the HTML page
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/generate', methods=['POST'])
 def generate_diagram():
