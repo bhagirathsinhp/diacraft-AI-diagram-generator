@@ -1,0 +1,280 @@
+/* Dark mode base for entire body */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Application container with Flexbox layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Header styling */
+.app-header {
+  background-color: #1f1f1f;
+  color: #dbd6d6;
+  border-radius: 12px;
+  padding: 5px 320px;
+  width: fit-content;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header title styling */
+.app-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* Content area styling */
+.app-main {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for form & diagram display areas */
+.form-section,
+.diagram-section {
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Form styling using Flexbox for vertical alignment */
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Textarea styling */
+textarea {
+  width: auto;
+  height: 200px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  resize: none;
+  font-family: "Roboto Mono", monospace;
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+fieldset {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+legend {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+/* Label & Radio button styling */
+label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+  font-weight: 400;
+}
+
+input[type="radio"] {
+  accent-color: #000000;
+}
+
+/* Dropdown selection styling */
+select {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  background-color: #333;
+  color: #e0e0e0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Button styling with hover and active states */
+button {
+  padding: 14px 22px;
+  background-color: #f1f1f1;
+  border: none;
+  color: #121212;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #cdd0d0;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #e2e2e2;
+  transform: translateY(0);
+}
+
+/* Error Message styling */
+.error {
+  color: #cf6679;
+  margin-top: 10px;
+  display: none;
+}
+
+/* Diagram section styling */
+.diagram-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styling for Generated Diagram container */
+.diagram-wrapper {
+  margin: 25px 0;
+  width: auto;
+  max-height: 100%;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  background-color: #121212;
+}
+
+/* Diagram image styling */
+.diagram-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.diagram-wrapper img.zoomed {
+  transform: scale(1.5);
+  max-width: none;
+  max-height: none;
+}
+
+/* PlantUML syntax section styling */
+.uml-syntax-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f1f1f;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* Readonly textarea styling */
+.uml-syntax-section textarea {
+  width: 100%;
+  height: 200px;
+  font-family: "Roboto Mono", monospace;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  resize: none;
+  background-color: #333;
+  color: #e0e0e0;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.PlantUMLHeader {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.uml-syntax-section button {
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+  color: #121212;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  align-self: center;
+}
+
+.uml-syntax-section button:hover {
+  background-color: #adaeae;
+  transform: translateY(-2px);
+}
+
+.uml-syntax-section button:active {
+  background-color: #a9a9a9;
+  transform: translateY(0);
+}
+
+.diagram-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  /* margin-bottom: 25px; */
+}
+
+.loading-message {
+  color: #aeb7b6;
+  font-weight: bold;
+  margin-top: 25px;
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .diagram-wrapper {
+    max-height: 300px;
+  }
+
+  uml-syntax-section {
+    padding: 15px;
+  }
+
+  .uml-syntax-section textarea {
+    height: 150px;
+  }
+
+  .form-section,
+  .diagram-section {
+    padding: 20px;
+  }
+
+  button {
+    padding: 12px 18px;
+  }
+}
