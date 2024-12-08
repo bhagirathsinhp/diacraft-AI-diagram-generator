@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     { value: "deployment", label: "Deployment Diagram" },
     { value: "object", label: "Object Diagram" },
     { value: "er-diagram", label: "Entity-Relationship Diagram" },
+    { value: "sa-diagram", label: "System Architecture Diagram" },
   ];
 
   // Map input types for selected radios

@@ -261,6 +261,73 @@ prompts = {
     Course "1" }}o--|| "1" Department : "belongs to"
     @enduml
     """,
+    
+    # System Architecture Diagram
+    "sa-diagram": """
+    Generate the most comprehensive and detailed system architecture diagram using PlantUML. The diagram must capture every critical aspect of a modern system's architecture, ensuring clarity, accuracy, and professional presentation. Include the following elements:
+
+     
+
+    ---
+
+    ### **Document Context**:
+    Input the following document to generate the system architecture:
+
+    Document:
+    {document}
+
+    ---
+
+    ### **Expected Output Format**:
+    The output must be written using PlantUML syntax, enclosed within @startuml and @enduml tags. An example output format:
+
+    ```plantuml
+    @startuml
+    skinparam componentStyle rectangle
+    top to bottom direction
+    skinparam linetype ortho
+    
+    
+    ' Modern Colors
+    skinparam rectangle {{
+        BackgroundColor #F4F7FB
+        BorderColor #A1A9B7
+    }}
+    skinparam cloud {{
+        BackgroundColor #E8F1FA
+        BorderColor #4A90E2
+    }}
+    skinparam database {{
+        BackgroundColor #FFE6CC
+        BorderColor #FF8C00
+    }}
+    skinparam queue {{
+        BackgroundColor #E4D8F4
+        BorderColor #9466FF
+    }}
+
+    ' Core Components
+    rectangle "Frontend (React)" as Frontend 
+    rectangle "Backend (Node.js)" as Backend 
+    database "MongoDB (NoSQL)" as NoSQLDatabase 
+    queue "RabbitMQ" as MessageQueue 
+    cloud "AWS (S3, Lambda)" as AWSCloud 
+
+    ' Interactions
+    Frontend -down-> Backend: REST API
+    Backend -right> NoSQLDatabase: Store and Retrieve Data
+    Backend -left> MessageQueue: Publish Events
+    MessageQueue -down> Backend: Consume Events
+    AWSCloud -up> Frontend: Serve Static Content
+
+    ' Observability and Security
+    rectangle "Prometheus" as Monitoring 
+    rectangle "OAuth2 Service" as AuthService 
+    Backend --> Monitoring: Expose Metrics
+    Frontend --> AuthService: Authenticate Users
+    @enduml
+
+    """
 }
 
 
