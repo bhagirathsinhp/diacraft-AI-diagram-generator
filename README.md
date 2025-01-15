@@ -127,9 +127,9 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 ---
 
-## Screenshots
+## Screenshot
 
-![DiaCra![Screenshot 2025-01-15 at 13-13-22 DiaCraft](https://github.com/user-attachments/assets/c55047a2-5fcc-47fd-a604-15a3b1c67917)
+[Screenshot 2025-01-15 at 13-13-22 DiaCraft](https://github.com/user-attachments/assets/c55047a2-5fcc-47fd-a604-15a3b1c67917)
 
 ---
 
