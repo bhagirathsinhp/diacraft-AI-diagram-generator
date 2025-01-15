@@ -129,7 +129,7 @@ OPENAI_API_KEY=your_openai_api_key_here
 
 ## Screenshot
 
-[Diacraft app](https://github.com/user-attachments/assets/c55047a2-5fcc-47fd-a604-15a3b1c67917)
+[Diacraft](https://github.com/user-attachments/assets/c55047a2-5fcc-47fd-a604-15a3b1c67917)
 
 ---
 
